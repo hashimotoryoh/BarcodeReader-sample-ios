@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		410D18EC22F8029700EF5180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D18EB22F8029700EF5180 /* AppDelegate.swift */; };
-		410D18EE22F8029700EF5180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D18ED22F8029700EF5180 /* ViewController.swift */; };
 		410D18F122F8029700EF5180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410D18EF22F8029700EF5180 /* Main.storyboard */; };
 		410D18F322F8029B00EF5180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410D18F222F8029B00EF5180 /* Assets.xcassets */; };
 		410D18F622F8029B00EF5180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410D18F422F8029B00EF5180 /* LaunchScreen.storyboard */; };
+		410D190022F804C000EF5180 /* BarcodeReaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D18FF22F804C000EF5180 /* BarcodeReaderController.swift */; };
+		410D190222F804FE00EF5180 /* BarcodeReaderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */; };
+		410D190422F8051100EF5180 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D190322F8051100EF5180 /* StoryboardInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		410D18E822F8029700EF5180 /* BarcodeReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		410D18EB22F8029700EF5180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		410D18ED22F8029700EF5180 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		410D18F022F8029700EF5180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		410D18F222F8029B00EF5180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		410D18F522F8029B00EF5180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		410D18F722F8029B00EF5180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		410D18FF22F804C000EF5180 /* BarcodeReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderController.swift; sourceTree = "<group>"; };
+		410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarcodeReaderController.storyboard; sourceTree = "<group>"; };
+		410D190322F8051100EF5180 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,31 @@
 			isa = PBXGroup;
 			children = (
 				410D18EB22F8029700EF5180 /* AppDelegate.swift */,
-				410D18ED22F8029700EF5180 /* ViewController.swift */,
+				410D18FD22F8046B00EF5180 /* ViewControllers */,
 				410D18EF22F8029700EF5180 /* Main.storyboard */,
 				410D18F222F8029B00EF5180 /* Assets.xcassets */,
 				410D18F422F8029B00EF5180 /* LaunchScreen.storyboard */,
 				410D18F722F8029B00EF5180 /* Info.plist */,
 			);
 			path = BarcodeReader;
+			sourceTree = "<group>";
+		};
+		410D18FD22F8046B00EF5180 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				410D190322F8051100EF5180 /* StoryboardInstantiable.swift */,
+				410D18FE22F8047400EF5180 /* BarcodeReaderController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		410D18FE22F8047400EF5180 /* BarcodeReaderController */ = {
+			isa = PBXGroup;
+			children = (
+				410D18FF22F804C000EF5180 /* BarcodeReaderController.swift */,
+				410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */,
+			);
+			path = BarcodeReaderController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410D190222F804FE00EF5180 /* BarcodeReaderController.storyboard in Resources */,
 				410D18F622F8029B00EF5180 /* LaunchScreen.storyboard in Resources */,
 				410D18F322F8029B00EF5180 /* Assets.xcassets in Resources */,
 				410D18F122F8029700EF5180 /* Main.storyboard in Resources */,
@@ -135,7 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				410D18EE22F8029700EF5180 /* ViewController.swift in Sources */,
+				410D190022F804C000EF5180 /* BarcodeReaderController.swift in Sources */,
+				410D190422F8051100EF5180 /* StoryboardInstantiable.swift in Sources */,
 				410D18EC22F8029700EF5180 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
