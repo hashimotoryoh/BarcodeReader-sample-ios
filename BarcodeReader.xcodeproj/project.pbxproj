@@ -14,6 +14,7 @@
 		410D190022F804C000EF5180 /* BarcodeReaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D18FF22F804C000EF5180 /* BarcodeReaderController.swift */; };
 		410D190222F804FE00EF5180 /* BarcodeReaderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */; };
 		410D190422F8051100EF5180 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D190322F8051100EF5180 /* StoryboardInstantiable.swift */; };
+		410D190722F808AF00EF5180 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410D190622F808AF00EF5180 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		410D18FF22F804C000EF5180 /* BarcodeReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderController.swift; sourceTree = "<group>"; };
 		410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarcodeReaderController.storyboard; sourceTree = "<group>"; };
 		410D190322F8051100EF5180 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		410D190622F808AF00EF5180 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410D190722F808AF00EF5180 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				410D18EA22F8029700EF5180 /* BarcodeReader */,
 				410D18E922F8029700EF5180 /* Products */,
+				410D190522F808AF00EF5180 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +88,14 @@
 				410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */,
 			);
 			path = BarcodeReaderController;
+			sourceTree = "<group>";
+		};
+		410D190522F808AF00EF5180 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				410D190622F808AF00EF5180 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
