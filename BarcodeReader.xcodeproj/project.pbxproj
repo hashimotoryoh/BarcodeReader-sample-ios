@@ -15,6 +15,7 @@
 		410D190222F804FE00EF5180 /* BarcodeReaderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */; };
 		410D190422F8051100EF5180 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D190322F8051100EF5180 /* StoryboardInstantiable.swift */; };
 		410D190722F808AF00EF5180 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410D190622F808AF00EF5180 /* AVFoundation.framework */; };
+		410D190A22F8165000EF5180 /* CGRect+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410D190922F8165000EF5180 /* CGRect+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		410D190122F804FE00EF5180 /* BarcodeReaderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarcodeReaderController.storyboard; sourceTree = "<group>"; };
 		410D190322F8051100EF5180 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		410D190622F808AF00EF5180 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		410D190922F8165000EF5180 /* CGRect+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				410D18EB22F8029700EF5180 /* AppDelegate.swift */,
+				410D190822F8163800EF5180 /* Extensions */,
 				410D18FD22F8046B00EF5180 /* ViewControllers */,
 				410D18EF22F8029700EF5180 /* Main.storyboard */,
 				410D18F222F8029B00EF5180 /* Assets.xcassets */,
@@ -96,6 +99,14 @@
 				410D190622F808AF00EF5180 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		410D190822F8163800EF5180 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				410D190922F8165000EF5180 /* CGRect+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				410D190022F804C000EF5180 /* BarcodeReaderController.swift in Sources */,
 				410D190422F8051100EF5180 /* StoryboardInstantiable.swift in Sources */,
 				410D18EC22F8029700EF5180 /* AppDelegate.swift in Sources */,
+				410D190A22F8165000EF5180 /* CGRect+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

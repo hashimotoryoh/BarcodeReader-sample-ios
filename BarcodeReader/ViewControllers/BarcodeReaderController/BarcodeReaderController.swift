@@ -44,12 +44,13 @@ final class BarcodeReaderController: UIViewController, StoryboardInstantiable {
                 let device = AVCaptureDevice.default(for: .video)
                 return try AVCaptureDeviceInput(device: device!)
             }())
-            session.addOutput({
+            let output: AVCaptureMetadataOutput = {
                 let output = AVCaptureMetadataOutput()
-                output.metadataObjectTypes = output.availableMetadataObjectTypes
                 output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
                 return output
-            }())
+            }()
+            session.addOutput(output)
+            output.metadataObjectTypes = [.qr, .ean8, .ean13]
             captureSession = session
 
             let previewLayer = AVCaptureVideoPreviewLayer(session: session)
@@ -78,5 +79,19 @@ final class BarcodeReaderController: UIViewController, StoryboardInstantiable {
 }
 
 extension BarcodeReaderController: AVCaptureMetadataOutputObjectsDelegate {
+
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        captureView.subviews.forEach { $0.removeFromSuperview() }
+        for object in metadataObjects {
+            self.drawMarker(for: object)
+        }
+    }
+
+    private func drawMarker(for object: AVMetadataObject) {
+        let view = UIView(frame: capturePreviewLayer.layerRectConverted(fromMetadataOutputRect: object.bounds))
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.red.cgColor
+        captureView.addSubview(view)
+    }
 
 }
