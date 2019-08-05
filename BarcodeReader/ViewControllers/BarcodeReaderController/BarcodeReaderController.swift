@@ -91,6 +91,19 @@ extension BarcodeReaderController: AVCaptureMetadataOutputObjectsDelegate {
         let view = UIView(frame: capturePreviewLayer.layerRectConverted(fromMetadataOutputRect: object.bounds))
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.red.cgColor
+
+        let label = UILabel()
+        label.backgroundColor = .red
+        label.textColor = .white
+        if let codeObject = object as? AVMetadataMachineReadableCodeObject {
+            label.text = codeObject.stringValue ?? "nil"
+        } else {
+            label.text = "読み取り不能..."
+        }
+        label.sizeToFit()
+        label.frame.origin = view.bounds.bottomLeft
+        view.addSubview(label)
+
         captureView.addSubview(view)
     }
 
